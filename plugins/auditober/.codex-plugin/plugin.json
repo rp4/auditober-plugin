@@ -1,0 +1,24 @@
+{
+  "author": {
+    "name": "AssureSwarm"
+  },
+  "description": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
+  "interface": {
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Help me use the skills in this plugin."
+    ],
+    "developerName": "AssureSwarm",
+    "displayName": "Auditober plugin",
+    "longDescription": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
+    "shortDescription": "Auditober plugin"
+  },
+  "mcpServers": "./.mcp.json",
+  "name": "auditober",
+  "skills": "./skills/",
+  "version": "0.26.2"
+}

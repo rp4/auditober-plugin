@@ -1,0 +1,16 @@
+{
+  "name": "auditober",
+  "version": "0.26.2",
+  "description": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
+  "author": {
+    "name": "AssureSwarm",
+    "email": "support@assureswarm.com"
+  },
+  "keywords": [
+    "auditober",
+    "audit",
+    "assureswarm",
+    "workflow",
+    "mcp"
+  ]
+}

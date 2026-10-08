@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "auditober": {
+      "type": "http",
+      "url": "https://core.assureswarm.com/mcp"
+    }
+  }
+}

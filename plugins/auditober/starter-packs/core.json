@@ -1,0 +1,4174 @@
+{
+  "name": "Canonical Studio Starter Pack",
+  "description": "Canonical Studio schema \u2014 the starter-pack base. Schema-only copy synced from canvas studio-seed/canonical-seed.json; keep in sync via sync_core_from_canonical.py (test_core_sync.py guards drift).",
+  "version": "1",
+  "format": "coworkcanvas",
+  "data": {
+    "itemTypes": [
+      {
+        "slug": "audit",
+        "name": "Audit",
+        "namePlural": "Audits",
+        "description": "Audit engagements and assessments \u2014 internal audits, SOX testing, compliance reviews, external attestations",
+        "icon": "ClipboardCheck",
+        "color": "#1E9BE0",
+        "displayOrder": 1,
+        "defaultStatus": "PLANNED",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "audit_type",
+            "label": "Audit Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "internal",
+                "label": "Internal Audit"
+              },
+              {
+                "value": "sox_testing",
+                "label": "SOX / ICFR Testing"
+              },
+              {
+                "value": "compliance",
+                "label": "Compliance Review"
+              },
+              {
+                "value": "operational",
+                "label": "Operational Audit"
+              },
+              {
+                "value": "it_audit",
+                "label": "IT Audit"
+              },
+              {
+                "value": "financial",
+                "label": "Financial Audit"
+              },
+              {
+                "value": "vendor_review",
+                "label": "Third-Party / Vendor Review"
+              },
+              {
+                "value": "investigation",
+                "label": "Investigation"
+              },
+              {
+                "value": "advisory",
+                "label": "Advisory / Consulting"
+              },
+              {
+                "value": "readiness",
+                "label": "Readiness Assessment"
+              },
+              {
+                "value": "external_attestation",
+                "label": "External Attestation (SOC / ISO)"
+              },
+              {
+                "value": "regulatory_exam",
+                "label": "Regulatory Exam Support"
+              }
+            ],
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "scope",
+            "label": "Scope",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "lead_auditor",
+            "label": "Lead Auditor",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "external_firm",
+            "label": "External Firm",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 5,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "rating",
+            "label": "Overall Rating",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "satisfactory",
+                "label": "Satisfactory"
+              },
+              {
+                "value": "needs_improvement",
+                "label": "Needs Improvement"
+              },
+              {
+                "value": "unsatisfactory",
+                "label": "Unsatisfactory"
+              },
+              {
+                "value": "not_rated",
+                "label": "Not Rated"
+              }
+            ],
+            "order": 6,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "opinion",
+            "label": "Opinion (attestation)",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "unqualified",
+                "label": "Unqualified"
+              },
+              {
+                "value": "qualified",
+                "label": "Qualified"
+              },
+              {
+                "value": "adverse",
+                "label": "Adverse"
+              },
+              {
+                "value": "disclaimer",
+                "label": "Disclaimer"
+              },
+              {
+                "value": "na",
+                "label": "N/A"
+              }
+            ],
+            "order": 7,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "period_start",
+            "label": "Period Start",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "period_end",
+            "label": "Period End",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fieldwork_start",
+            "label": "Fieldwork Start",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fieldwork_end",
+            "label": "Fieldwork End",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 11,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "report_date",
+            "label": "Report Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fiscal_year",
+            "label": "Fiscal Year",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 13,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "risk",
+        "name": "Risk",
+        "namePlural": "Risks",
+        "description": "Enterprise risk register \u2014 risks rated inherent-to-residual and mapped to domains and taxonomy tags",
+        "icon": "AlertTriangle",
+        "color": "#EF4444",
+        "displayOrder": 2,
+        "defaultStatus": "OPEN",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "category",
+            "label": "Category",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "cyber_security",
+                "label": "Cyber Security"
+              },
+              {
+                "value": "operational",
+                "label": "Operational"
+              },
+              {
+                "value": "financial_reporting",
+                "label": "Financial Reporting"
+              },
+              {
+                "value": "compliance_regulatory",
+                "label": "Compliance & Regulatory"
+              },
+              {
+                "value": "third_party",
+                "label": "Third Party / Supply Chain"
+              },
+              {
+                "value": "privacy",
+                "label": "Privacy & Data Protection"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "strategic",
+                "label": "Strategic"
+              },
+              {
+                "value": "reputational",
+                "label": "Reputational"
+              },
+              {
+                "value": "esg",
+                "label": "ESG / Environmental"
+              },
+              {
+                "value": "people_hr",
+                "label": "People & HR"
+              },
+              {
+                "value": "business_continuity",
+                "label": "Business Continuity"
+              }
+            ],
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "subcategory",
+            "label": "Subcategory",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "taxonomies",
+            "label": "Taxonomy Tags",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "cyber_security",
+                "label": "Cyber Security"
+              },
+              {
+                "value": "data_privacy",
+                "label": "Data Privacy"
+              },
+              {
+                "value": "financial_reporting",
+                "label": "Financial Reporting"
+              },
+              {
+                "value": "operational_resilience",
+                "label": "Operational Resilience"
+              },
+              {
+                "value": "third_party_risk",
+                "label": "Third-Party Risk"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "esg_sustainability",
+                "label": "ESG / Sustainability"
+              },
+              {
+                "value": "people_hr",
+                "label": "People & HR"
+              },
+              {
+                "value": "regulatory_compliance",
+                "label": "Regulatory Compliance"
+              },
+              {
+                "value": "strategic_risk",
+                "label": "Strategic Risk"
+              },
+              {
+                "value": "reputational_risk",
+                "label": "Reputational Risk"
+              },
+              {
+                "value": "business_continuity",
+                "label": "Business Continuity"
+              }
+            ],
+            "order": 4,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "domains",
+            "label": "Domains",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "governance_policy_oversight",
+                "label": "Governance, Policy & Oversight"
+              },
+              {
+                "value": "risk_assessment_management",
+                "label": "Risk Assessment & Management"
+              },
+              {
+                "value": "asset_management_inventory",
+                "label": "Asset Management & Inventory"
+              },
+              {
+                "value": "access_control_identity",
+                "label": "Access Control & Identity Management"
+              },
+              {
+                "value": "cryptography_key_management",
+                "label": "Cryptography & Key Management"
+              },
+              {
+                "value": "human_resources_personnel_security",
+                "label": "Human Resources / Personnel Security"
+              },
+              {
+                "value": "physical_environmental_security",
+                "label": "Physical & Environmental Security"
+              },
+              {
+                "value": "secure_configuration_change_management",
+                "label": "Secure Configuration & Change Management"
+              },
+              {
+                "value": "vulnerability_patch_management",
+                "label": "Vulnerability & Patch Management"
+              },
+              {
+                "value": "logging_monitoring_detection",
+                "label": "Logging, Monitoring & Detection"
+              },
+              {
+                "value": "incident_management_response",
+                "label": "Incident Management & Response"
+              },
+              {
+                "value": "business_continuity_disaster_recovery",
+                "label": "Business Continuity & Disaster Recovery"
+              },
+              {
+                "value": "third_party_supply_chain_risk",
+                "label": "Third-Party / Supply-Chain Risk"
+              },
+              {
+                "value": "data_protection_privacy",
+                "label": "Data Protection & Privacy"
+              },
+              {
+                "value": "secure_development_sdlc",
+                "label": "Secure Development (SDLC) & Application Security"
+              },
+              {
+                "value": "network_communications_security",
+                "label": "Network & Communications Security"
+              },
+              {
+                "value": "awareness_training",
+                "label": "Awareness & Training"
+              },
+              {
+                "value": "compliance_audit_assurance",
+                "label": "Compliance, Audit & Assurance"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "financial_reporting_controls",
+                "label": "Financial Reporting Controls (SOX)"
+              }
+            ],
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "likelihood",
+            "label": "Likelihood",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "very_high",
+                "label": "Very High"
+              }
+            ],
+            "order": 6,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "impact",
+            "label": "Impact",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 7,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "inherent_likelihood",
+            "label": "Inherent Likelihood",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "very_high",
+                "label": "Very High"
+              }
+            ],
+            "order": 8,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "inherent_impact",
+            "label": "Inherent Impact",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 9,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "inherent_rating",
+            "label": "Inherent Rating",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 10,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "residual_rating",
+            "label": "Residual Rating",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 11,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "treatment",
+            "label": "Treatment",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "mitigate",
+                "label": "Mitigate"
+              },
+              {
+                "value": "accept",
+                "label": "Accept"
+              },
+              {
+                "value": "transfer",
+                "label": "Transfer"
+              },
+              {
+                "value": "avoid",
+                "label": "Avoid"
+              }
+            ],
+            "order": 12,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "risk_owner",
+            "label": "Risk Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 13,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "control",
+        "name": "Control",
+        "namePlural": "Controls",
+        "description": "Control library \u2014 controls mapped to frameworks and domains, with type, automation, and operating frequency",
+        "icon": "ShieldCheck",
+        "color": "#10B981",
+        "displayOrder": 3,
+        "defaultStatus": "ACTIVE",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "control_id",
+            "label": "Control ID",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 2,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "framework",
+            "label": "Frameworks",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "nist-800-53",
+                "label": "NIST SP 800-53 Rev 5"
+              },
+              {
+                "value": "nist-csf-2",
+                "label": "NIST CSF 2.0"
+              },
+              {
+                "value": "cobit-2019",
+                "label": "COBIT 2019"
+              },
+              {
+                "value": "iso-27001",
+                "label": "ISO/IEC 27001:2022"
+              },
+              {
+                "value": "iso-42001",
+                "label": "ISO/IEC 42001:2023"
+              },
+              {
+                "value": "iso-31000",
+                "label": "ISO 31000:2018"
+              },
+              {
+                "value": "soc2",
+                "label": "AICPA SOC 2"
+              },
+              {
+                "value": "soc1",
+                "label": "AICPA SOC 1 (SSAE 18)"
+              },
+              {
+                "value": "sox",
+                "label": "SOX 404"
+              },
+              {
+                "value": "coso-ic",
+                "label": "COSO Internal Control"
+              },
+              {
+                "value": "coso-erm",
+                "label": "COSO ERM"
+              },
+              {
+                "value": "iia-2024",
+                "label": "IIA 2024 Global Standards"
+              },
+              {
+                "value": "gdpr",
+                "label": "EU GDPR"
+              },
+              {
+                "value": "dora",
+                "label": "EU DORA"
+              },
+              {
+                "value": "nydfs-500",
+                "label": "NYDFS Part 500"
+              },
+              {
+                "value": "eu-ai-act",
+                "label": "EU AI Act"
+              },
+              {
+                "value": "nis2",
+                "label": "EU NIS2"
+              },
+              {
+                "value": "pci-dss",
+                "label": "PCI DSS 4.0"
+              },
+              {
+                "value": "hipaa",
+                "label": "HIPAA"
+              },
+              {
+                "value": "ccpa",
+                "label": "CCPA/CPRA"
+              }
+            ],
+            "order": 3,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "family",
+            "label": "Family / Group",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "domains",
+            "label": "Domains",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "governance_policy_oversight",
+                "label": "Governance, Policy & Oversight"
+              },
+              {
+                "value": "risk_assessment_management",
+                "label": "Risk Assessment & Management"
+              },
+              {
+                "value": "asset_management_inventory",
+                "label": "Asset Management & Inventory"
+              },
+              {
+                "value": "access_control_identity",
+                "label": "Access Control & Identity Management"
+              },
+              {
+                "value": "cryptography_key_management",
+                "label": "Cryptography & Key Management"
+              },
+              {
+                "value": "human_resources_personnel_security",
+                "label": "Human Resources / Personnel Security"
+              },
+              {
+                "value": "physical_environmental_security",
+                "label": "Physical & Environmental Security"
+              },
+              {
+                "value": "secure_configuration_change_management",
+                "label": "Secure Configuration & Change Management"
+              },
+              {
+                "value": "vulnerability_patch_management",
+                "label": "Vulnerability & Patch Management"
+              },
+              {
+                "value": "logging_monitoring_detection",
+                "label": "Logging, Monitoring & Detection"
+              },
+              {
+                "value": "incident_management_response",
+                "label": "Incident Management & Response"
+              },
+              {
+                "value": "business_continuity_disaster_recovery",
+                "label": "Business Continuity & Disaster Recovery"
+              },
+              {
+                "value": "third_party_supply_chain_risk",
+                "label": "Third-Party / Supply-Chain Risk"
+              },
+              {
+                "value": "data_protection_privacy",
+                "label": "Data Protection & Privacy"
+              },
+              {
+                "value": "secure_development_sdlc",
+                "label": "Secure Development (SDLC) & Application Security"
+              },
+              {
+                "value": "network_communications_security",
+                "label": "Network & Communications Security"
+              },
+              {
+                "value": "awareness_training",
+                "label": "Awareness & Training"
+              },
+              {
+                "value": "compliance_audit_assurance",
+                "label": "Compliance, Audit & Assurance"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "financial_reporting_controls",
+                "label": "Financial Reporting Controls (SOX)"
+              }
+            ],
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "control_type",
+            "label": "Control Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "preventive",
+                "label": "Preventive"
+              },
+              {
+                "value": "detective",
+                "label": "Detective"
+              },
+              {
+                "value": "corrective",
+                "label": "Corrective"
+              }
+            ],
+            "order": 6,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "control_category",
+            "label": "Control Category",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "administrative",
+                "label": "Administrative"
+              },
+              {
+                "value": "technical",
+                "label": "Technical"
+              },
+              {
+                "value": "physical",
+                "label": "Physical"
+              }
+            ],
+            "order": 7,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "control_class",
+            "label": "Control Class",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "entity_level",
+                "label": "Entity-Level"
+              },
+              {
+                "value": "business_process",
+                "label": "Business Process"
+              },
+              {
+                "value": "itgc",
+                "label": "ITGC"
+              },
+              {
+                "value": "itac",
+                "label": "ITAC"
+              },
+              {
+                "value": "soc1_service_delivery",
+                "label": "SOC 1 Service Delivery"
+              }
+            ],
+            "order": 8,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "itgc_domain",
+            "label": "ITGC Domain",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "access_to_programs_data",
+                "label": "Access to Programs & Data"
+              },
+              {
+                "value": "program_changes",
+                "label": "Program Changes"
+              },
+              {
+                "value": "computer_operations",
+                "label": "Computer Operations"
+              },
+              {
+                "value": "program_development",
+                "label": "Program Development"
+              },
+              {
+                "value": "end_user_computing",
+                "label": "End-User Computing (EUC)"
+              }
+            ],
+            "order": 9,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "automation",
+            "label": "Automation",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "automated",
+                "label": "Automated"
+              },
+              {
+                "value": "manual",
+                "label": "Manual"
+              },
+              {
+                "value": "hybrid",
+                "label": "Hybrid"
+              }
+            ],
+            "order": 10,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "key_control",
+            "label": "Key Control",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "true",
+                "label": "Key control"
+              },
+              {
+                "value": "false",
+                "label": "Non-key"
+              }
+            ],
+            "order": 11,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "sox_applicable",
+            "label": "SOX Applicable",
+            "fieldType": "BOOLEAN",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "frequency",
+            "label": "Operating Frequency",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "continuous",
+                "label": "Continuous"
+              },
+              {
+                "value": "daily",
+                "label": "Daily"
+              },
+              {
+                "value": "weekly",
+                "label": "Weekly"
+              },
+              {
+                "value": "monthly",
+                "label": "Monthly"
+              },
+              {
+                "value": "quarterly",
+                "label": "Quarterly"
+              },
+              {
+                "value": "semi_annual",
+                "label": "Semi-Annual"
+              },
+              {
+                "value": "annual",
+                "label": "Annual"
+              },
+              {
+                "value": "ad_hoc",
+                "label": "Ad hoc / Event-driven"
+              }
+            ],
+            "order": 13,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "locations",
+            "label": "Locations",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 14,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "control_owner",
+            "label": "Control Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 15,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "design_conclusion",
+            "label": "Design Conclusion",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "not_assessed",
+                "label": "Not Assessed"
+              },
+              {
+                "value": "effective",
+                "label": "Effective"
+              },
+              {
+                "value": "deficient",
+                "label": "Deficient"
+              }
+            ],
+            "order": 16,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "interim_result",
+            "label": "Interim Test Result",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "not_tested",
+                "label": "Not Tested"
+              },
+              {
+                "value": "in_progress",
+                "label": "In Progress"
+              },
+              {
+                "value": "effective",
+                "label": "Effective"
+              },
+              {
+                "value": "exception",
+                "label": "Exception"
+              }
+            ],
+            "order": 17,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "ye_result",
+            "label": "Year-End Test Result",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "not_tested",
+                "label": "Not Tested"
+              },
+              {
+                "value": "in_progress",
+                "label": "In Progress"
+              },
+              {
+                "value": "effective",
+                "label": "Effective"
+              },
+              {
+                "value": "exception",
+                "label": "Exception"
+              }
+            ],
+            "order": 18,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "rollforward_strategy",
+            "label": "Roll-Forward Strategy",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "full_retest",
+                "label": "Full Retest"
+              },
+              {
+                "value": "roll_forward",
+                "label": "Roll-Forward"
+              },
+              {
+                "value": "interim_sufficient",
+                "label": "Interim Sufficient"
+              },
+              {
+                "value": "not_required",
+                "label": "Not Required"
+              }
+            ],
+            "order": 19,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "last_tested_fy",
+            "label": "Last Tested FY",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 20,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "workpaper",
+            "label": "Workpaper",
+            "fieldType": "DOCUMENT",
+            "required": false,
+            "options": null,
+            "order": 21,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "issue",
+        "name": "Issue",
+        "namePlural": "Issues",
+        "description": "Findings, observations, exceptions and waivers \u2014 identification, classification and response; corrective actions are linked Remediation items",
+        "icon": "Flag",
+        "color": "#F97316",
+        "displayOrder": 4,
+        "defaultStatus": "DRAFT",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "severity",
+            "label": "Severity",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "issue_type",
+            "label": "Issue Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "finding",
+                "label": "Finding"
+              },
+              {
+                "value": "observation",
+                "label": "Observation"
+              },
+              {
+                "value": "opportunity",
+                "label": "Opportunity for Improvement"
+              },
+              {
+                "value": "exception",
+                "label": "Test Exception"
+              },
+              {
+                "value": "policy_exception",
+                "label": "Policy Exception / Waiver"
+              },
+              {
+                "value": "deficiency",
+                "label": "Deficiency"
+              },
+              {
+                "value": "significant_deficiency",
+                "label": "Significant Deficiency"
+              },
+              {
+                "value": "material_weakness",
+                "label": "Material Weakness"
+              },
+              {
+                "value": "pbc_request",
+                "label": "PBC Request"
+              }
+            ],
+            "order": 3,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "source",
+            "label": "Source",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "internal_audit",
+                "label": "Internal Audit"
+              },
+              {
+                "value": "external_audit",
+                "label": "External Audit"
+              },
+              {
+                "value": "sox_testing",
+                "label": "SOX Testing"
+              },
+              {
+                "value": "compliance_review",
+                "label": "Compliance Review"
+              },
+              {
+                "value": "self_assessment",
+                "label": "Self-Assessment"
+              },
+              {
+                "value": "penetration_test",
+                "label": "Penetration Test"
+              },
+              {
+                "value": "vulnerability_scan",
+                "label": "Vulnerability Scan"
+              },
+              {
+                "value": "regulatory_exam",
+                "label": "Regulatory Exam"
+              },
+              {
+                "value": "management_identified",
+                "label": "Management Identified"
+              }
+            ],
+            "order": 4,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "sox_deficiency",
+            "label": "SOX Deficiency",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "control_deficiency",
+                "label": "Control Deficiency"
+              },
+              {
+                "value": "significant_deficiency",
+                "label": "Significant Deficiency"
+              },
+              {
+                "value": "material_weakness",
+                "label": "Material Weakness"
+              }
+            ],
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "root_cause",
+            "label": "Root Cause",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 6,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "recommendation",
+            "label": "Recommendation",
+            "fieldType": "RICHTEXT",
+            "required": false,
+            "options": null,
+            "order": 7,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "management_response",
+            "label": "Management Response",
+            "fieldType": "RICHTEXT",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "issue_owner",
+            "label": "Issue Owner",
+            "fieldType": "USER",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "issue_collaborators",
+            "label": "Issue Collaborators",
+            "fieldType": "USERS",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "identified_date",
+            "label": "Identified / Open Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 11,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "reported_date",
+            "label": "Reported Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "exception_approver",
+            "label": "Exception Approver",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 13,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "exception_expiry_date",
+            "label": "Exception Expiry / Re-review Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 14,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "remediation",
+        "name": "Remediation",
+        "namePlural": "Remediations",
+        "description": "Remediation actions \u2014 the discrete corrective actions that clear findings and exceptions, each with its own owner, dates, validation method and closure evidence",
+        "icon": "Wrench",
+        "color": "#6366F1",
+        "displayOrder": 5,
+        "defaultStatus": "OPEN",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "plan",
+            "label": "Remediation Plan",
+            "fieldType": "RICHTEXT",
+            "required": false,
+            "options": null,
+            "order": 2,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "remediation_type",
+            "label": "Remediation Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "control_redesign",
+                "label": "Control Redesign"
+              },
+              {
+                "value": "new_control",
+                "label": "New Control"
+              },
+              {
+                "value": "system_configuration",
+                "label": "System Configuration"
+              },
+              {
+                "value": "process_change",
+                "label": "Process Change"
+              },
+              {
+                "value": "policy_update",
+                "label": "Policy Update"
+              },
+              {
+                "value": "training",
+                "label": "Training"
+              },
+              {
+                "value": "data_correction",
+                "label": "Data Correction"
+              },
+              {
+                "value": "third_party_action",
+                "label": "Third-Party Action"
+              },
+              {
+                "value": "evidence_submission",
+                "label": "Evidence Submission"
+              },
+              {
+                "value": "monitoring_only",
+                "label": "Monitoring Only"
+              }
+            ],
+            "order": 3,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "action_owner",
+            "label": "Action Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "priority",
+            "label": "Priority",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 5,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "target_date",
+            "label": "Target Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 6,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "revised_target_date",
+            "label": "Revised Target Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 7,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "completed_date",
+            "label": "Completed Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "verified_date",
+            "label": "Verification Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "verified_by",
+            "label": "Verified By",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "validation_method",
+            "label": "Validation Method",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "design_retest",
+                "label": "Design Retest"
+              },
+              {
+                "value": "operating_retest",
+                "label": "Operating Effectiveness Retest"
+              },
+              {
+                "value": "evidence_inspection",
+                "label": "Evidence Inspection"
+              },
+              {
+                "value": "reperformance",
+                "label": "Reperformance"
+              },
+              {
+                "value": "monitoring",
+                "label": "Monitoring Period"
+              }
+            ],
+            "order": 11,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "closure_criteria",
+            "label": "Closure Criteria",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "evidence",
+            "label": "Closure Evidence",
+            "fieldType": "DOCUMENT",
+            "required": false,
+            "options": null,
+            "order": 13,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "process",
+        "name": "Process",
+        "namePlural": "Processes",
+        "description": "Auditable business and IT processes \u2014 the entities audits scope over and controls operate within",
+        "icon": "GitBranch",
+        "color": "#8B5CF6",
+        "displayOrder": 6,
+        "defaultStatus": "ACTIVE",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "process_type",
+            "label": "Process Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "business_process",
+                "label": "Business Process"
+              },
+              {
+                "value": "financial_reporting",
+                "label": "Financial Reporting Cycle"
+              },
+              {
+                "value": "it_general_control",
+                "label": "IT General Control"
+              },
+              {
+                "value": "security_process",
+                "label": "Security Process"
+              },
+              {
+                "value": "operational",
+                "label": "Operational"
+              }
+            ],
+            "order": 2,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "process_owner",
+            "label": "Process Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "frequency",
+            "label": "Frequency",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fsli_significance",
+            "label": "Financial Significance to FSLIs",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "process_complexity",
+            "label": "Process Complexity",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 6,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "manual_intervention",
+            "label": "Degree of Manual Intervention",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 7,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "issue_history",
+            "label": "History of Issues / Findings",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 8,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "third_party_reliance",
+            "label": "Reliance on Third Parties",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 9,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "process_change",
+            "label": "Level of Change to Process",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 10,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "monitoring_gap",
+            "label": "Lack of Monitoring Function",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 11,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "bp_weighted_score",
+            "label": "BP Weighted Score",
+            "fieldType": "NUMBER",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "bp_overall_assessment",
+            "label": "BP Overall Assessment",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 13,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "in_scope",
+            "label": "In Scope This Year",
+            "fieldType": "BOOLEAN",
+            "required": false,
+            "options": null,
+            "order": 14,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "scope_rationale",
+            "label": "Scope Rationale",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 15,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "last_tested_fy",
+            "label": "Last Tested FY",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 16,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "policy",
+        "name": "Policy",
+        "namePlural": "Policies",
+        "description": "Policy library \u2014 policies, standards, procedures, guidelines and charters with ownership, versioning, framework mapping and review cycles",
+        "icon": "ScrollText",
+        "color": "#14B8A6",
+        "displayOrder": 7,
+        "defaultStatus": "ACTIVE",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "policy_type",
+            "label": "Policy Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "policy",
+                "label": "Policy"
+              },
+              {
+                "value": "standard",
+                "label": "Standard"
+              },
+              {
+                "value": "procedure",
+                "label": "Procedure"
+              },
+              {
+                "value": "guideline",
+                "label": "Guideline"
+              },
+              {
+                "value": "charter",
+                "label": "Charter"
+              }
+            ],
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "policy_owner",
+            "label": "Policy Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "approved_by",
+            "label": "Approved By",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "version",
+            "label": "Version",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 5,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "framework",
+            "label": "Frameworks",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "nist-800-53",
+                "label": "NIST SP 800-53 Rev 5"
+              },
+              {
+                "value": "nist-csf-2",
+                "label": "NIST CSF 2.0"
+              },
+              {
+                "value": "cobit-2019",
+                "label": "COBIT 2019"
+              },
+              {
+                "value": "iso-27001",
+                "label": "ISO/IEC 27001:2022"
+              },
+              {
+                "value": "iso-42001",
+                "label": "ISO/IEC 42001:2023"
+              },
+              {
+                "value": "iso-31000",
+                "label": "ISO 31000:2018"
+              },
+              {
+                "value": "soc2",
+                "label": "AICPA SOC 2"
+              },
+              {
+                "value": "soc1",
+                "label": "AICPA SOC 1 (SSAE 18)"
+              },
+              {
+                "value": "sox",
+                "label": "SOX 404"
+              },
+              {
+                "value": "coso-ic",
+                "label": "COSO Internal Control"
+              },
+              {
+                "value": "coso-erm",
+                "label": "COSO ERM"
+              },
+              {
+                "value": "iia-2024",
+                "label": "IIA 2024 Global Standards"
+              },
+              {
+                "value": "gdpr",
+                "label": "EU GDPR"
+              },
+              {
+                "value": "dora",
+                "label": "EU DORA"
+              },
+              {
+                "value": "nydfs-500",
+                "label": "NYDFS Part 500"
+              },
+              {
+                "value": "eu-ai-act",
+                "label": "EU AI Act"
+              },
+              {
+                "value": "nis2",
+                "label": "EU NIS2"
+              },
+              {
+                "value": "pci-dss",
+                "label": "PCI DSS 4.0"
+              },
+              {
+                "value": "hipaa",
+                "label": "HIPAA"
+              },
+              {
+                "value": "ccpa",
+                "label": "CCPA/CPRA"
+              }
+            ],
+            "order": 6,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "domains",
+            "label": "Domains",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "governance_policy_oversight",
+                "label": "Governance, Policy & Oversight"
+              },
+              {
+                "value": "risk_assessment_management",
+                "label": "Risk Assessment & Management"
+              },
+              {
+                "value": "asset_management_inventory",
+                "label": "Asset Management & Inventory"
+              },
+              {
+                "value": "access_control_identity",
+                "label": "Access Control & Identity Management"
+              },
+              {
+                "value": "cryptography_key_management",
+                "label": "Cryptography & Key Management"
+              },
+              {
+                "value": "human_resources_personnel_security",
+                "label": "Human Resources / Personnel Security"
+              },
+              {
+                "value": "physical_environmental_security",
+                "label": "Physical & Environmental Security"
+              },
+              {
+                "value": "secure_configuration_change_management",
+                "label": "Secure Configuration & Change Management"
+              },
+              {
+                "value": "vulnerability_patch_management",
+                "label": "Vulnerability & Patch Management"
+              },
+              {
+                "value": "logging_monitoring_detection",
+                "label": "Logging, Monitoring & Detection"
+              },
+              {
+                "value": "incident_management_response",
+                "label": "Incident Management & Response"
+              },
+              {
+                "value": "business_continuity_disaster_recovery",
+                "label": "Business Continuity & Disaster Recovery"
+              },
+              {
+                "value": "third_party_supply_chain_risk",
+                "label": "Third-Party / Supply-Chain Risk"
+              },
+              {
+                "value": "data_protection_privacy",
+                "label": "Data Protection & Privacy"
+              },
+              {
+                "value": "secure_development_sdlc",
+                "label": "Secure Development (SDLC) & Application Security"
+              },
+              {
+                "value": "network_communications_security",
+                "label": "Network & Communications Security"
+              },
+              {
+                "value": "awareness_training",
+                "label": "Awareness & Training"
+              },
+              {
+                "value": "compliance_audit_assurance",
+                "label": "Compliance, Audit & Assurance"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "financial_reporting_controls",
+                "label": "Financial Reporting Controls (SOX)"
+              }
+            ],
+            "order": 7,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "review_frequency",
+            "label": "Review Frequency",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "quarterly",
+                "label": "Quarterly"
+              },
+              {
+                "value": "semi_annual",
+                "label": "Semi-Annual"
+              },
+              {
+                "value": "annual",
+                "label": "Annual"
+              },
+              {
+                "value": "biennial",
+                "label": "Biennial"
+              },
+              {
+                "value": "ad_hoc",
+                "label": "Ad hoc / Event-driven"
+              }
+            ],
+            "order": 8,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "effective_date",
+            "label": "Effective Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "next_review_date",
+            "label": "Next Review Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "system",
+        "name": "System",
+        "namePlural": "Systems",
+        "description": "Systems and service-provider register \u2014 internal and third-party dependencies tiered by criticality and data exposure, with ownership, assessment cadence, monitoring status and contract dates",
+        "icon": "Server",
+        "color": "#F59E0B",
+        "displayOrder": 8,
+        "defaultStatus": "ACTIVE",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "vendor",
+            "label": "Vendor",
+            "fieldType": "BOOLEAN",
+            "required": false,
+            "options": null,
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "category",
+            "label": "Category",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "saas_software",
+                "label": "SaaS / Software"
+              },
+              {
+                "value": "cloud_infrastructure",
+                "label": "Cloud & Infrastructure"
+              },
+              {
+                "value": "managed_services",
+                "label": "Managed Services"
+              },
+              {
+                "value": "professional_services",
+                "label": "Professional Services"
+              },
+              {
+                "value": "data_processing",
+                "label": "Data Processing"
+              },
+              {
+                "value": "hardware_supplier",
+                "label": "Hardware Supplier"
+              },
+              {
+                "value": "facilities",
+                "label": "Facilities"
+              },
+              {
+                "value": "other",
+                "label": "Other"
+              }
+            ],
+            "order": 3,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "tier",
+            "label": "Criticality Tier",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              },
+              {
+                "value": "critical",
+                "label": "Critical"
+              }
+            ],
+            "order": 4,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "data_classification",
+            "label": "Highest Data Classification Shared",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "none",
+                "label": "None"
+              },
+              {
+                "value": "public",
+                "label": "Public"
+              },
+              {
+                "value": "internal",
+                "label": "Internal"
+              },
+              {
+                "value": "confidential",
+                "label": "Confidential"
+              },
+              {
+                "value": "restricted",
+                "label": "Restricted"
+              }
+            ],
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "business_owner",
+            "label": "Business Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 6,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "risk_owner",
+            "label": "Risk Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 7,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "reassessment_cadence",
+            "label": "Reassessment Cadence",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "quarterly",
+                "label": "Quarterly"
+              },
+              {
+                "value": "semi_annual",
+                "label": "Semi-Annual"
+              },
+              {
+                "value": "annual",
+                "label": "Annual"
+              },
+              {
+                "value": "biennial",
+                "label": "Biennial"
+              },
+              {
+                "value": "ad_hoc",
+                "label": "Ad hoc / Event-driven"
+              }
+            ],
+            "order": 8,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "last_assessment_date",
+            "label": "Last Assessment Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "next_reassessment_date",
+            "label": "Next Reassessment Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "monitoring_status",
+            "label": "Monitoring Status",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "enrolled",
+                "label": "Enrolled in Continuous Monitoring"
+              },
+              {
+                "value": "not_enrolled",
+                "label": "Not Enrolled"
+              },
+              {
+                "value": "exited",
+                "label": "Exited / Offboarded"
+              }
+            ],
+            "order": 11,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "contract_end_date",
+            "label": "Contract End Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "fsli",
+        "name": "FSLI",
+        "namePlural": "FSLIs",
+        "description": "Financial-statement line items and TB components \u2014 balances, weighted risk criteria, significance conclusions and assertions for SOX/ICFR scoping",
+        "icon": "Landmark",
+        "color": "#0EA5E9",
+        "displayOrder": 9,
+        "defaultStatus": "ACTIVE",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "statement",
+            "label": "Statement",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "balance_sheet",
+                "label": "Balance Sheet"
+              },
+              {
+                "value": "income_statement",
+                "label": "Income Statement"
+              },
+              {
+                "value": "cash_flow",
+                "label": "Cash Flow"
+              },
+              {
+                "value": "equity",
+                "label": "Equity"
+              },
+              {
+                "value": "disclosure",
+                "label": "Disclosure"
+              }
+            ],
+            "order": 2,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fs_order",
+            "label": "FS Order",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "account_ref",
+            "label": "Account Ref",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "tb_account",
+            "label": "TB Component",
+            "fieldType": "BOOLEAN",
+            "required": false,
+            "options": null,
+            "order": 5,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "balance",
+            "label": "Balance",
+            "fieldType": "NUMBER",
+            "required": false,
+            "options": null,
+            "order": 6,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "annualized_balance",
+            "label": "Annualized Balance",
+            "fieldType": "NUMBER",
+            "required": false,
+            "options": null,
+            "order": 7,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "balance_date",
+            "label": "Balance Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "yoy_change_pct",
+            "label": "YoY Change %",
+            "fieldType": "NUMBER",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "financial_significance",
+            "label": "Financial Significance",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 10,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "valuation_complexity",
+            "label": "Valuation Complexity / Subjectivity",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 11,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "restatement_history",
+            "label": "History of Restatement / Errors",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 12,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "external_sensitivity",
+            "label": "Sensitivity to External Factors",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 13,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "fraud_risk",
+            "label": "Fraud Risk (Financial Reporting)",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 14,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "activity_volume",
+            "label": "Volume of Activity",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 15,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "volatility",
+            "label": "Level of Volatility",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 16,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "disclosure_impact",
+            "label": "Impact on Disclosures",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 17,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "weighted_score",
+            "label": "Weighted Score",
+            "fieldType": "NUMBER",
+            "required": false,
+            "options": null,
+            "order": 18,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "overall_assessment",
+            "label": "Overall Assessment",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "high",
+                "label": "High"
+              }
+            ],
+            "order": 19,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "significant",
+            "label": "Significant Account",
+            "fieldType": "BOOLEAN",
+            "required": false,
+            "options": null,
+            "order": 20,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "assertions",
+            "label": "Relevant Assertions",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "existence_occurrence",
+                "label": "Existence / Occurrence"
+              },
+              {
+                "value": "completeness",
+                "label": "Completeness"
+              },
+              {
+                "value": "accuracy_valuation",
+                "label": "Accuracy / Valuation"
+              },
+              {
+                "value": "cutoff",
+                "label": "Cutoff"
+              },
+              {
+                "value": "rights_obligations",
+                "label": "Rights & Obligations"
+              },
+              {
+                "value": "classification",
+                "label": "Classification"
+              },
+              {
+                "value": "presentation_disclosure",
+                "label": "Presentation & Disclosure"
+              }
+            ],
+            "order": 21,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "rationale",
+            "label": "Rationale",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 22,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "assessed_fy",
+            "label": "Assessed FY",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 23,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "requirement",
+        "name": "Compliance Requirement",
+        "namePlural": "Compliance Requirements",
+        "description": "Compliance requirements \u2014 framework clauses, controls, criteria and obligations mapped to applicability, implementation status and evidence",
+        "icon": "BookCheck",
+        "color": "#64748B",
+        "displayOrder": 10,
+        "defaultStatus": "OPEN",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "full_description",
+            "label": "Full Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 1,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "reference",
+            "label": "Reference",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 2,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "framework",
+            "label": "Framework",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "nist-800-53",
+                "label": "NIST SP 800-53 Rev 5"
+              },
+              {
+                "value": "nist-csf-2",
+                "label": "NIST CSF 2.0"
+              },
+              {
+                "value": "cobit-2019",
+                "label": "COBIT 2019"
+              },
+              {
+                "value": "iso-27001",
+                "label": "ISO/IEC 27001:2022"
+              },
+              {
+                "value": "iso-42001",
+                "label": "ISO/IEC 42001:2023"
+              },
+              {
+                "value": "iso-31000",
+                "label": "ISO 31000:2018"
+              },
+              {
+                "value": "soc2",
+                "label": "AICPA SOC 2"
+              },
+              {
+                "value": "soc1",
+                "label": "AICPA SOC 1 (SSAE 18)"
+              },
+              {
+                "value": "sox",
+                "label": "SOX 404"
+              },
+              {
+                "value": "coso-ic",
+                "label": "COSO Internal Control"
+              },
+              {
+                "value": "coso-erm",
+                "label": "COSO ERM"
+              },
+              {
+                "value": "iia-2024",
+                "label": "IIA 2024 Global Standards"
+              },
+              {
+                "value": "gdpr",
+                "label": "EU GDPR"
+              },
+              {
+                "value": "dora",
+                "label": "EU DORA"
+              },
+              {
+                "value": "nydfs-500",
+                "label": "NYDFS Part 500"
+              },
+              {
+                "value": "eu-ai-act",
+                "label": "EU AI Act"
+              },
+              {
+                "value": "nis2",
+                "label": "EU NIS2"
+              },
+              {
+                "value": "pci-dss",
+                "label": "PCI DSS 4.0"
+              },
+              {
+                "value": "hipaa",
+                "label": "HIPAA"
+              },
+              {
+                "value": "ccpa",
+                "label": "CCPA/CPRA"
+              }
+            ],
+            "order": 3,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "framework_version",
+            "label": "Framework Version",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "domain",
+            "label": "Domain",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "requirement_kind",
+            "label": "Requirement Kind",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "clause",
+                "label": "Clause"
+              },
+              {
+                "value": "control",
+                "label": "Control"
+              },
+              {
+                "value": "criterion",
+                "label": "Criterion"
+              },
+              {
+                "value": "obligation",
+                "label": "Obligation"
+              }
+            ],
+            "order": 6,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "applicability",
+            "label": "Applicability",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "applicable",
+                "label": "Applicable"
+              },
+              {
+                "value": "not_applicable",
+                "label": "Not Applicable"
+              },
+              {
+                "value": "pending_review",
+                "label": "Pending Review"
+              }
+            ],
+            "order": 7,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "applicability_justification",
+            "label": "Applicability Justification",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "implementation_status",
+            "label": "Implementation Status",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "implemented",
+                "label": "Implemented"
+              },
+              {
+                "value": "partially_implemented",
+                "label": "Partially Implemented"
+              },
+              {
+                "value": "planned",
+                "label": "Planned"
+              },
+              {
+                "value": "not_implemented",
+                "label": "Not Implemented"
+              },
+              {
+                "value": "not_applicable",
+                "label": "Not Applicable"
+              }
+            ],
+            "order": 9,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "requirement_owner",
+            "label": "Requirement Owner",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "last_review_date",
+            "label": "Last Review Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 11,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "next_review_date",
+            "label": "Next Review Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 12,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "domains",
+            "label": "Domains",
+            "fieldType": "MULTISELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "governance_policy_oversight",
+                "label": "Governance, Policy & Oversight"
+              },
+              {
+                "value": "risk_assessment_management",
+                "label": "Risk Assessment & Management"
+              },
+              {
+                "value": "asset_management_inventory",
+                "label": "Asset Management & Inventory"
+              },
+              {
+                "value": "access_control_identity",
+                "label": "Access Control & Identity Management"
+              },
+              {
+                "value": "cryptography_key_management",
+                "label": "Cryptography & Key Management"
+              },
+              {
+                "value": "human_resources_personnel_security",
+                "label": "Human Resources / Personnel Security"
+              },
+              {
+                "value": "physical_environmental_security",
+                "label": "Physical & Environmental Security"
+              },
+              {
+                "value": "secure_configuration_change_management",
+                "label": "Secure Configuration & Change Management"
+              },
+              {
+                "value": "vulnerability_patch_management",
+                "label": "Vulnerability & Patch Management"
+              },
+              {
+                "value": "logging_monitoring_detection",
+                "label": "Logging, Monitoring & Detection"
+              },
+              {
+                "value": "incident_management_response",
+                "label": "Incident Management & Response"
+              },
+              {
+                "value": "business_continuity_disaster_recovery",
+                "label": "Business Continuity & Disaster Recovery"
+              },
+              {
+                "value": "third_party_supply_chain_risk",
+                "label": "Third-Party / Supply-Chain Risk"
+              },
+              {
+                "value": "data_protection_privacy",
+                "label": "Data Protection & Privacy"
+              },
+              {
+                "value": "secure_development_sdlc",
+                "label": "Secure Development (SDLC) & Application Security"
+              },
+              {
+                "value": "network_communications_security",
+                "label": "Network & Communications Security"
+              },
+              {
+                "value": "awareness_training",
+                "label": "Awareness & Training"
+              },
+              {
+                "value": "compliance_audit_assurance",
+                "label": "Compliance, Audit & Assurance"
+              },
+              {
+                "value": "ai_governance",
+                "label": "AI Governance"
+              },
+              {
+                "value": "financial_reporting_controls",
+                "label": "Financial Reporting Controls (SOX)"
+              }
+            ],
+            "order": 13,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "evidence",
+            "label": "Evidence",
+            "fieldType": "DOCUMENT",
+            "required": false,
+            "options": null,
+            "order": 14,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      },
+      {
+        "slug": "personnel",
+        "name": "Personnel",
+        "namePlural": "Personnel",
+        "description": "People register - the employees, contractors, founders, advisers and service-provider staff who hold roles in the control environment, with engagement status, reporting line, responsibilities, authority and the declared systems scope that access reviews and lifecycle workflows operate against",
+        "icon": "UserCog",
+        "color": "#EC4899",
+        "displayOrder": 11,
+        "defaultStatus": "DRAFT",
+        "fieldDefinitions": [
+          {
+            "fieldKey": "description",
+            "label": "Description",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 0,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "personnel_key",
+            "label": "Personnel Key",
+            "fieldType": "TEXT",
+            "required": true,
+            "options": null,
+            "order": 1,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "full_name",
+            "label": "Full Name",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 2,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "work_email",
+            "label": "Work Email",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 3,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "user_account",
+            "label": "User Account",
+            "fieldType": "USER",
+            "required": false,
+            "options": null,
+            "order": 4,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "affiliation",
+            "label": "Organization / Affiliation",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 5,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "engagement_type",
+            "label": "Engagement Type",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "unconfirmed",
+                "label": "Not confirmed"
+              },
+              {
+                "value": "employee",
+                "label": "Employee"
+              },
+              {
+                "value": "contractor",
+                "label": "Contractor"
+              },
+              {
+                "value": "founder",
+                "label": "Founder / principal"
+              },
+              {
+                "value": "external_advisor",
+                "label": "External adviser"
+              },
+              {
+                "value": "service_provider",
+                "label": "Service-provider personnel"
+              }
+            ],
+            "order": 6,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "engagement_status",
+            "label": "Engagement Status",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "unconfirmed",
+                "label": "Not confirmed"
+              },
+              {
+                "value": "planned",
+                "label": "Planned"
+              },
+              {
+                "value": "active",
+                "label": "Active"
+              },
+              {
+                "value": "on_leave",
+                "label": "On leave"
+              },
+              {
+                "value": "ended",
+                "label": "Ended"
+              }
+            ],
+            "order": 7,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "department",
+            "label": "Department / Function",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 8,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "position_title",
+            "label": "Position Title",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 9,
+            "isCore": true,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "manager_name",
+            "label": "Line Manager",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 10,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "manager_personnel_key",
+            "label": "Manager Personnel Key",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 11,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "reporting_arrangement",
+            "label": "Reporting Arrangement",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "line_managed",
+                "label": "Reports to a line manager"
+              },
+              {
+                "value": "principal",
+                "label": "Principal / no line manager"
+              },
+              {
+                "value": "independent_oversight",
+                "label": "Independent governance oversight"
+              },
+              {
+                "value": "unconfirmed",
+                "label": "Not confirmed"
+              }
+            ],
+            "order": 12,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "responsibilities",
+            "label": "Responsibilities",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 13,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "authority_and_escalation",
+            "label": "Authority and Escalation",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 14,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "responsibility_review_status",
+            "label": "Responsibility Review Status",
+            "fieldType": "SELECT",
+            "required": false,
+            "options": [
+              {
+                "value": "proposed",
+                "label": "Proposed for review"
+              },
+              {
+                "value": "documented",
+                "label": "Documented role scope"
+              },
+              {
+                "value": "approved",
+                "label": "Approved individual assignment"
+              }
+            ],
+            "order": 15,
+            "isCore": true,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "role_effective_date",
+            "label": "Role Effective Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 16,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "role_effective_date_basis",
+            "label": "Role Effective-Date Basis",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 17,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "engagement_start_date",
+            "label": "Engagement Start Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 18,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "engagement_end_date",
+            "label": "Engagement End Date",
+            "fieldType": "DATE",
+            "required": false,
+            "options": null,
+            "order": 19,
+            "isCore": false,
+            "isFilterable": true,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "systems_scope",
+            "label": "Declared Systems Scope",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 20,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": true,
+            "group": null
+          },
+          {
+            "fieldKey": "role_description",
+            "label": "Approved Role Description",
+            "fieldType": "DOCUMENT",
+            "required": false,
+            "options": null,
+            "order": 21,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "verification_gaps",
+            "label": "Details Requiring Confirmation",
+            "fieldType": "TEXTAREA",
+            "required": false,
+            "options": null,
+            "order": 22,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "source_record_url",
+            "label": "Source Record",
+            "fieldType": "TEXT",
+            "required": false,
+            "options": null,
+            "order": 23,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          },
+          {
+            "fieldKey": "source_evidence",
+            "label": "Data Sources",
+            "fieldType": "JSON",
+            "required": false,
+            "options": null,
+            "order": 24,
+            "isCore": false,
+            "isFilterable": false,
+            "isSearchable": false,
+            "group": null
+          }
+        ]
+      }
+    ],
+    "items": {
+      "audit": [],
+      "risk": [],
+      "control": [],
+      "issue": [],
+      "remediation": [],
+      "process": [],
+      "policy": [],
+      "system": [],
+      "fsli": [],
+      "requirement": [],
+      "personnel": []
+    },
+    "itemRelationships": [],
+    "workflows": [],
+    "workflowsAttached": [],
+    "dashboards": []
+  }
+}

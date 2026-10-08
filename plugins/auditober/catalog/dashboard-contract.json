@@ -1,0 +1,764 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "repository": "canvas",
+    "revision": "c2aacf4b1cd8f40a03fd87c4fa0aaaa96ff0345a",
+    "files": [
+      {
+        "path": "apps/core/schema.graphql",
+        "sha256": "812e9f2b9fdff744e7fc56b7d7aa1e102c7b6ce6f41774fc6b70e496237c7742"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/[id]/page.tsx",
+        "sha256": "a5ac0f896ace4b730f2970e82b9b0040834b9c4baa60a9dab0ff41ddcb0d35e4"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/ai-activity/page.tsx",
+        "sha256": "393af405f95a28608ea7c801a513a606317a59d57c659307bcaa3ac6d3af88fd"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/audit-plan/page.tsx",
+        "sha256": "2f475bd5a0d393d48b6c6657200a5bb584c1b1d60269498c6032ca33b3a3fc25"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/capacity-monitoring/page.tsx",
+        "sha256": "09b54b7371092629de62d3cd6fac42e47e145b128add63c15a9133df20797356"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/compliance-requirements/page.tsx",
+        "sha256": "48b856ad85224b6d8a3780e4e6caba888da0952a2aa8dfa2054d07fa476d83e3"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/executive/page.tsx",
+        "sha256": "1a8c90bafdd9848ef963d853537bacbc4390ac74b6c4cb5a089be07a270ffb39"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/issues-remediations/page.tsx",
+        "sha256": "54fc5f0f8e774926daacbd7b302f1523a4c4cffcdb3ee5c7c9a9b4674d22ba6f"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/lib/retired-dashboards.ts",
+        "sha256": "2bc8f0ddafdb95c74c7873b84283c312f85639e666f08ec85671834fa6b28f0a"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/model-inventory/page.tsx",
+        "sha256": "d4f5936256e021cc0088a219d65e3de3c4dbc64c4def980c56f1dc41cc82a6b9"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/my-work/page.tsx",
+        "sha256": "5c9cdca0f8bbf3caaddd8ad87f9ed0fab36455539c1fe8e7148782c209cf4da1"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/operations/page.tsx",
+        "sha256": "5e0588239cc50dccae906c120c257fbcaf8b5e5e1cde0484ab4eceff8e06aaa2"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/personnel/page.tsx",
+        "sha256": "a62edc972229559bc377f3237092a4b195bb6003f7415790ecfabb4c31131e54"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/policy-exceptions/page.tsx",
+        "sha256": "4bb8021bb405eaf97a28a036b38ca5658cadd726f8b59fa8c0cb531ebd39c311"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/policy-lifecycle/page.tsx",
+        "sha256": "e614a4cd86de67564496ac299e1a8d704da4cd32ed27465586d3376548f95019"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/rcm/page.tsx",
+        "sha256": "19992ed36bc2bff41b0318a75dd9e7ec5cf3e8d1b1c1385521e241838a332480"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/register/[slug]/page.tsx",
+        "sha256": "35741ae74f81dbf01eee508d65e9385b1fdf7a21340bfeda1387dd1640571b17"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/risks/page.tsx",
+        "sha256": "e137e60d70858f0c4409ba2652438f479a3c6407c7a6d87e70f7c16262a66cbc"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/sox-program/page.tsx",
+        "sha256": "5af805ed7346e83c47224c6619ee8b0bf5bfd3d42de7bc7bb7aa5322e9b3b349"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/template-runs/page.tsx",
+        "sha256": "d11528cbc67aa4a4afe99176e65e26b1cb812532c55b79536c861a9bab35e028"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/third-party-risk/page.tsx",
+        "sha256": "98408c35f203e9f3b6ad6ec7a1a1916b8c6df13f0f42d98414cc83672f84e056"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/universe/page.tsx",
+        "sha256": "29f590cb5979881a35f60ebf5100524ed909b21ece7cf0a905c6b74583fb1d32"
+      },
+      {
+        "path": "apps/core/src/app/[locale]/dashboards/workflow-coverage/page.tsx",
+        "sha256": "863bf1612371769f8580822ea5212f2979caf65a5b80005fb625de7aae2d3321"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/audit-plan/useAuditPlanParams.ts",
+        "sha256": "99f4ab514ffb81f7458cb39dd2ebdbb476ab16c407841f58483a6ee3bc468bd1"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/compliance-requirements/useComplianceRequirementsParams.ts",
+        "sha256": "bb95aa1346933a803fd06823da0697194eb94aff836da64d2d15e6100af3b4cd"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/issues-remediations/useIssuesRemediationsParams.ts",
+        "sha256": "185182fa87ef6f2463477228b7c315dfcf648fc18d7bdff8956fe25de3d79a81"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/model-inventory/useModelInventoryParams.ts",
+        "sha256": "564e3ebbf71456e8d23f589c02d94fb1be75bdea250b0e190de29b5a6a2ba145"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/north-star/production/dashboard-table-url-state.ts",
+        "sha256": "806094732a85faec40e046d0afcee8a30a6893a242d2781de92ea7b78f5dbeab"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/north-star/production/registry.ts",
+        "sha256": "2c4b7312e2ded69dc604a8551beba3a47b595b9be6b4114ca3a8d3585ff786c1"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/north-star/production/scope-resolver.ts",
+        "sha256": "9c6189ef78b81d3f1aed5caf55f0d929daaaa40ac5171580a555b7507249dcae"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/north-star/production/useItemTypeDashboardParams.ts",
+        "sha256": "7d3a2fcb9d44973064be484816c3eddc428620f378a64f5aa37582e848a938ba"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/north-star/production/useSystemDashboardParams.ts",
+        "sha256": "5f9a5393850556ca0b7baf9926b0af3c1a0401158f92d8991c7663c3f77c046e"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/personnel/PersonnelDashboard.tsx",
+        "sha256": "4d31a41d1ffd4357485bd71fd8e78b46c2185f93c8789e39cc78c8d23959bae3"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/policy-exceptions/usePolicyExceptionsParams.ts",
+        "sha256": "46fe456b81b62ef3b6953ff1eb2a08f668b69205b23708ea3b82a40de13b67e0"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/policy-lifecycle/usePolicyLifecycleParams.ts",
+        "sha256": "57064450d8e760bf3bb650209f4f27a875628be5b4eb0b3efe05bf659e0662c9"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/risks/useRisksParams.ts",
+        "sha256": "72b23fd315d5fe2b26aad91b30328d41f41864a93716b14705850dfa08a66700"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/sox-program/useSoxProgramParams.ts",
+        "sha256": "409eb228e2e1dd7ecf8d1336499c9094ff24ef56c9c46fa8ba317cefc5ed0ff3"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/template-runs/useTemplateRunsParams.ts",
+        "sha256": "bf9e1f0d3f81d833afc0124d13c5e7c27616824d3b2cfbec5dcdafe54a8e38e1"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/third-party-risk/useThirdPartyRiskParams.ts",
+        "sha256": "4b24efb96314ce4c5f7f508c3cc110c2296277e666cf4f8c8f540f33ec911773"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/universe/useUniverseFilterParams.ts",
+        "sha256": "c8b61750f9a6d20ec9f04e17b0b62ffb6579ce4f30519852f78e2e200b6f7bb2"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/workflow-coverage/WorkflowCoverageDashboard.tsx",
+        "sha256": "4076928b9aa806acbd32f8815dddbfca12db0cdda419e7326c438dd2bef5f583"
+      },
+      {
+        "path": "apps/core/src/components/dashboards/workflow-coverage/WorkflowCoverageExplorer.tsx",
+        "sha256": "7e5c9f777cdafc8527f0a90535054feb00c7a826380aaefebf2ef4ebe2061dfa"
+      },
+      {
+        "path": "apps/core/src/graphql/schema/dashboard.ts",
+        "sha256": "aa81318d02cb57b7408561b5ff710ee1ed156c69f0c124ad1cfa296383a671ce"
+      },
+      {
+        "path": "apps/core/src/lib/core/dashboard-analytics-v2/table-definitions.ts",
+        "sha256": "efb419d1d54f1d63650e2a72cc1c891c22dc4275316e457809840fad7ad75767"
+      },
+      {
+        "path": "apps/core/src/lib/core/dashboards/dashboard-service.ts",
+        "sha256": "cc599286c598fab03ee475502eb0ee9e7cb29aacff07168923fdadafd1bfcd57"
+      },
+      {
+        "path": "apps/core/src/lib/core/issues-remediations/model.ts",
+        "sha256": "debe7d96a6d548de8f0c3d1acb54ebf40c760299b3ee670c4aa717b89143ce62"
+      },
+      {
+        "path": "packages/contracts/src/audit-plan.ts",
+        "sha256": "7230f15789cb512192ba1c9d456d94efeb37ccb26e20d5a197ba9c7cd4b20052"
+      },
+      {
+        "path": "packages/contracts/src/compliance-requirements.ts",
+        "sha256": "cb8534c9b3e2bdac711985a7c9a2ad4e0eff4a064e6126743aeb6c49161db38b"
+      },
+      {
+        "path": "packages/contracts/src/dashboard-coverage.ts",
+        "sha256": "854c1c1408b8ef96abd34d9ecc0238a7313059cf4f0c636df6c175a0078da888"
+      },
+      {
+        "path": "packages/contracts/src/issues-remediations.ts",
+        "sha256": "beaaca6d7dc74ddce988b5701c2556a9c8ff5a50e4d361d7a15eecd6eb6cbc1f"
+      },
+      {
+        "path": "packages/contracts/src/model-inventory.ts",
+        "sha256": "02eda5427b78419fa57138f8a59363a0d49cb1dda6cdb33f6fa1dde8f4969d59"
+      },
+      {
+        "path": "packages/contracts/src/policy-exceptions.ts",
+        "sha256": "0c220c6f47b0b551ae0c358ca2bead4b9e6d650cfd616938c7847458e9208d2f"
+      },
+      {
+        "path": "packages/contracts/src/policy-lifecycle.ts",
+        "sha256": "19123cbd168ebb13cc1d1458892bffaf853ed61c3b390ab5c8cf8d0503f888a2"
+      },
+      {
+        "path": "packages/contracts/src/risks-dashboard.ts",
+        "sha256": "c2cc2ba0ec450d63fc0ac218f5a6f05df13ee4c94e52fc7d6b21dd4ee517217a"
+      },
+      {
+        "path": "packages/contracts/src/sox-program.ts",
+        "sha256": "300019d5a165c63dbfd1123ff1f09b4b3906acc67cd56a3ff0a91001bf94b214"
+      },
+      {
+        "path": "packages/contracts/src/template-runs.ts",
+        "sha256": "0d2e3788bb960e4fa8b228bdf4cec799af51d90324f3e48d02043fa748dc4fb2"
+      },
+      {
+        "path": "packages/contracts/src/third-party-risk.ts",
+        "sha256": "003f96dd9ca8ede41606173352f58cf91007adef675753d56e2b2bf4a7932995"
+      }
+    ]
+  },
+  "systemDashboardTypes": [
+    "AI_ACTIVITY",
+    "CAPACITY_MONITORING",
+    "EXECUTIVE",
+    "MY_WORK",
+    "OPERATIONAL",
+    "RISK_CONTROL_MATRIX"
+  ],
+  "routesByType": {
+    "ai-activity": {
+      "path": "/dashboards/ai-activity",
+      "title": "AI Activity",
+      "systemType": "AI_ACTIVITY",
+      "parameters": [
+        "range",
+        "scope",
+        "filter",
+        "USER_OUTCOMES.q",
+        "USER_OUTCOMES.sort",
+        "STEP_REJECTIONS.q",
+        "STEP_REJECTIONS.sort"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ],
+        "USER_OUTCOMES.sort": [
+          "approved.asc",
+          "approved.desc",
+          "rejected.asc",
+          "rejected.desc",
+          "pending.asc",
+          "pending.desc",
+          "failed.asc",
+          "failed.desc",
+          "total.asc",
+          "total.desc"
+        ],
+        "STEP_REJECTIONS.sort": [
+          "reviewed.asc",
+          "reviewed.desc",
+          "rejected.asc",
+          "rejected.desc",
+          "rejectionPercent.asc",
+          "rejectionPercent.desc"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "Suggestion usage and outcome movement",
+      "scopeSource": "ITEM_TYPE_SCOPES",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "audit-plan": {
+      "path": "/dashboards/audit-plan",
+      "title": "Audit Plan",
+      "systemType": null,
+      "parameters": [
+        "year"
+      ],
+      "values": {},
+      "queries": [
+        "auditPlanDashboard"
+      ],
+      "notes": "Audit plan by year (2000–2100). Use year, not fy, range or audit."
+    },
+    "capacity-monitoring": {
+      "path": "/dashboards/capacity-monitoring",
+      "title": "Capacity Monitoring",
+      "systemType": "CAPACITY_MONITORING",
+      "parameters": [
+        "range",
+        "scope",
+        "entity",
+        "filter"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "Owner workload, due work, and late work",
+      "scopeSource": "ITEM_TYPE_SCOPES",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "compliance-requirements": {
+      "path": "/dashboards/compliance-requirements",
+      "title": "Compliance Requirements",
+      "systemType": null,
+      "parameters": [
+        "frameworks",
+        "applicability",
+        "implementation",
+        "q"
+      ],
+      "values": {},
+      "queries": [
+        "complianceRequirementsDashboard"
+      ],
+      "notes": "Requirement applicability and implementation. Resolve framework tokens live and use the declared applicability/implementation values."
+    },
+    "executive": {
+      "path": "/dashboards/executive",
+      "title": "Executive",
+      "systemType": "EXECUTIVE",
+      "parameters": [
+        "range",
+        "scope",
+        "filter"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "Enterprise assurance posture and decisions",
+      "scopeSource": "CANONICAL_REGISTER_DOMAIN_SOURCES",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "issues-remediations": {
+      "path": "/dashboards/issues-remediations",
+      "title": "Issues Remediations",
+      "systemType": null,
+      "parameters": [
+        "audit",
+        "fy"
+      ],
+      "values": {},
+      "queries": [
+        "issuesRemediationsDashboard"
+      ],
+      "notes": "Open issues, overdue remediation and validation. Only audit and fy filter the URL. past_due means the earliest open linked remediation target is before today. For overdue-only answers select issues.dueState=past_due and use daysLate/counts.pastDue; check issuesCapped and linksCapped before claiming complete coverage. Link the wider view as context."
+    },
+    "item-type-register": {
+      "path": "/dashboards/register/<slug>",
+      "title": "Item type register",
+      "systemType": null,
+      "parameters": [
+        "range",
+        "fieldFilters",
+        "filter"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ]
+      },
+      "queries": [
+        "itemTypeDashboardSnapshot",
+        "itemTypeDashboardDetails"
+      ],
+      "notes": "A verified active register row supplies configJson.itemTypeSlug. range=6m|12m|ytd; fieldFilters is a JSON object of live field keys to string arrays; filter is a returned selection key. Never infer an available register from item-type-register alone.",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "model-inventory": {
+      "path": "/dashboards/model-inventory",
+      "title": "Model Inventory",
+      "systemType": null,
+      "parameters": [
+        "model"
+      ],
+      "values": {},
+      "queries": [
+        "modelInventoryDashboard"
+      ],
+      "notes": "Model register and assurance. Resolve the model item represented by the selection live."
+    },
+    "my-work": {
+      "path": "/dashboards/my-work",
+      "title": "My Work",
+      "systemType": "MY_WORK",
+      "parameters": [
+        "range",
+        "scope",
+        "filter"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "A prioritized view of work requiring action",
+      "scopeSource": "ITEM_TYPE_SCOPES",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "operational": {
+      "path": "/dashboards/operations",
+      "title": "Operational",
+      "systemType": "OPERATIONAL",
+      "parameters": [
+        "range",
+        "scope",
+        "filter"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "Workflow throughput, delay, and accumulated work",
+      "scopeSource": "ITEM_TYPE_SCOPES",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "personnel": {
+      "path": "/dashboards/personnel",
+      "title": "Personnel",
+      "systemType": null,
+      "parameters": [
+        "focus",
+        "template",
+        "after",
+        "first"
+      ],
+      "values": {
+        "first": [
+          "6",
+          "12",
+          "24"
+        ]
+      },
+      "queries": [
+        "personnelDashboard",
+        "personnelDashboardPeople",
+        "personnelDashboardTemplates"
+      ],
+      "notes": "People and reporting lines. focus is a live personnel item ID; template is a live template ID; first=6|12|24; after is an opaque returned cursor. Clear after when focus or template changes."
+    },
+    "policy-exceptions": {
+      "path": "/dashboards/policy-exceptions",
+      "title": "Policy Exceptions",
+      "systemType": null,
+      "parameters": [
+        "scope",
+        "type",
+        "framework",
+        "q"
+      ],
+      "values": {
+        "scope": [
+          "open",
+          "all"
+        ]
+      },
+      "queries": [
+        "policyExceptionsDashboard"
+      ],
+      "notes": "Policy waiver approvals and expiry. scope=open|all; type/framework refer to the waived policy."
+    },
+    "policy-lifecycle": {
+      "path": "/dashboards/policy-lifecycle",
+      "title": "Policy Lifecycle",
+      "systemType": null,
+      "parameters": [
+        "type",
+        "framework",
+        "templates",
+        "q",
+        "owner",
+        "status",
+        "review"
+      ],
+      "values": {
+        "review": [
+          "overdue",
+          "due",
+          "due_30",
+          "due_60",
+          "due_90",
+          "later",
+          "no_date"
+        ]
+      },
+      "queries": [
+        "policyLifecycleDashboard"
+      ],
+      "notes": "Policy review workflow, calendar, owner and status. Resolve type/framework/owner/status live; review uses the checked fixed tokens."
+    },
+    "rcm": {
+      "path": "/dashboards/rcm",
+      "title": "Risk Control Matrix (RCM)",
+      "systemType": "RISK_CONTROL_MATRIX",
+      "parameters": [
+        "range",
+        "entity",
+        "filter",
+        "RCM_MATRIX.audit",
+        "RCM_MATRIX.type",
+        "RCM_MATRIX.coverage",
+        "RCM_MATRIX.q",
+        "RCM_MATRIX.sort"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "ytd"
+        ],
+        "RCM_MATRIX.sort": [
+          "item.asc",
+          "item.desc",
+          "audit.asc",
+          "audit.desc",
+          "coverage.asc",
+          "coverage.desc",
+          "signedOff.asc",
+          "signedOff.desc"
+        ]
+      },
+      "queries": [
+        "systemDashboardSnapshot",
+        "systemDashboardTable"
+      ],
+      "notes": "Risk and control coverage for an audit. entity is its live audit ID. RCM_MATRIX filter values come from systemDashboardTable.filterOptions; scope has no domain selector.",
+      "scopeSource": "null",
+      "repeatedParameters": [
+        "filter"
+      ]
+    },
+    "risks": {
+      "path": "/dashboards/risks",
+      "title": "Risks",
+      "systemType": null,
+      "parameters": [
+        "categories",
+        "treatments",
+        "templates",
+        "q",
+        "owner"
+      ],
+      "values": {},
+      "queries": [
+        "risksDashboard"
+      ],
+      "notes": "Open risks, treatment, owner and linked work. categories/treatments use live field options; none means no treatment; templates are risk-template IDs."
+    },
+    "sox-program": {
+      "path": "/dashboards/sox-program",
+      "title": "Sox Program",
+      "systemType": null,
+      "parameters": [
+        "controls"
+      ],
+      "values": {
+        "controls": [
+          "key",
+          "all"
+        ]
+      },
+      "queries": [
+        "soxProgramDashboard"
+      ],
+      "notes": "Current SOX program. controls=key|all; key is the default. Legacy coverage parameters redirect to Workflow Coverage and must not be added here.",
+      "legacyCoverageParameters": [
+        "context",
+        "coverage",
+        "workflows",
+        "q",
+        "contextItemType",
+        "relatedItemType"
+      ]
+    },
+    "template-runs": {
+      "path": "/dashboards/template-runs",
+      "title": "Template Runs",
+      "systemType": null,
+      "parameters": [
+        "templates",
+        "range",
+        "month",
+        "state"
+      ],
+      "values": {
+        "range": [
+          "6m",
+          "12m",
+          "24m"
+        ],
+        "state": [
+          "complete",
+          "open"
+        ]
+      },
+      "queries": [
+        "workflowTemplateRunTrend",
+        "workflowTemplateRunTrendDetails"
+      ],
+      "notes": "Workflow runs by selected template. Up to 12 bare live template IDs; range=6m|12m|24m (12m default). month=YYYY-MM and state=complete|open travel together."
+    },
+    "third-party-risk": {
+      "path": "/dashboards/third-party-risk",
+      "title": "Third Party Risk",
+      "systemType": null,
+      "parameters": [
+        "scope",
+        "tiers",
+        "templates",
+        "q"
+      ],
+      "values": {
+        "scope": [
+          "vendors",
+          "all"
+        ]
+      },
+      "queries": [
+        "thirdPartyRiskDashboard",
+        "formFollowup"
+      ],
+      "notes": "Vendor systems by tier and review progress. scope=vendors|all (vendors default); tiers use live system.tier tokens; up to 12 live system-template IDs; q is search."
+    },
+    "universe": {
+      "path": "/dashboards/universe",
+      "title": "Universe",
+      "systemType": null,
+      "parameters": [
+        "q",
+        "node",
+        "window",
+        "focus",
+        "hops",
+        "depth"
+      ],
+      "values": {
+        "window": [
+          "7d",
+          "30d",
+          "90d",
+          "1y"
+        ]
+      },
+      "queries": [
+        "universeData",
+        "universeFocus"
+      ],
+      "notes": "Graph and focus views. Dynamic selectors come from universeData.nodeTypes. Any selector creates a complete snapshot including all ordinary fields and four synthetic types; preserve explicit empty values. Verify focus via universeFocus.",
+      "dynamicParameters": "Live nodeTypes: <slug> or <slug>.<fieldKey>; complete selector snapshot required"
+    },
+    "workflow-coverage": {
+      "path": "/dashboards/workflow-coverage",
+      "title": "Workflow Coverage",
+      "systemType": null,
+      "parameters": [
+        "contextItemType",
+        "context",
+        "relatedItemType",
+        "q",
+        "coverage",
+        "workflows"
+      ],
+      "values": {},
+      "queries": [
+        "workflowCoverageDashboard"
+      ],
+      "notes": "A view requires contextItemType, context (live item ID), and relatedItemType. q, coverage and workflows use the resulting view’s live groups."
+    }
+  },
+  "aliases": {
+    "audits": "/dashboards/audit-plan",
+    "audits-overview": "/dashboards/audit-plan",
+    "compliance-overview": "/dashboards/rcm",
+    "controls": "/dashboards/rcm",
+    "controls-overview": "/dashboards/rcm",
+    "form-follow-up": "/dashboards",
+    "issues": "/dashboards/issues-remediations",
+    "issues-overview": "/dashboards/issues-remediations",
+    "open-requests": "/dashboards",
+    "policies": "/dashboards/policy-lifecycle",
+    "policies-overview": "/dashboards/policy-lifecycle",
+    "process-hierarchy": "/dashboards",
+    "process-operations": "/dashboards",
+    "processes": "/dashboards",
+    "risks-overview": "/dashboards/risks",
+    "statement-of-applicability": "/dashboards/rcm",
+    "systems": "/dashboards/third-party-risk?scope=all",
+    "systems-overview": "/dashboards/third-party-risk?scope=all",
+    "workflow-operations": "/dashboards/template-runs"
+  },
+  "retiredRegisterSlugs": [
+    "fsli",
+    "model",
+    "personnel",
+    "process",
+    "remediation"
+  ],
+  "contentSha256": "5c23a76220a72973563e3f87ed81636f110f8213e8dce796b479f359d298bb14"
+}

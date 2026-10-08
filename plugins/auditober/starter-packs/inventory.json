@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "shipped": [
+    "core.json"
+  ],
+  "baseline": {
+    "types": [
+      "audit",
+      "risk",
+      "control",
+      "issue",
+      "remediation",
+      "process",
+      "policy",
+      "system",
+      "fsli",
+      "requirement",
+      "personnel"
+    ],
+    "vendor": "system.vendor"
+  },
+  "retired": {
+    "audit": "Uses authority_source, audit_universe_entity and audit_plan.",
+    "grc": "Uses authority_source.",
+    "reg": "Uses authority_source.",
+    "sox": "Uses authority_source.",
+    "generic": "Uses legacy project, task, contact and note types."
+  },
+  "alternative": "Use the current core schema and current workflow library; explicit --from inputs require validation. Historical files remain in source only."
+}
