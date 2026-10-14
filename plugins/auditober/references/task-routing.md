@@ -7,6 +7,8 @@ Ask only when an unresolved distinction changes the work.
 | --- | --- | --- |
 | Open a new issue, risk, control or other record | coach-item-create | "Open a new" creates a proposal; it is not a dashboard request. |
 | Show overdue issues or open an existing view | coach-dashboard-link | Answer the data question and use supported URL filters. An overdue-only answer does not imply an overdue-only URL filter. |
+| Build or save a view of an existing dashboard with chosen variables | coach-dashboard-view | The view is that dashboard's link; set only the variables it reads, resolved live. |
+| Build a new custom dashboard | coach-dashboard-build | A live artifact page on a host that can publish pages with connector access; it reads through query_data and never writes. |
 | Resume or execute an existing workflow | coach-workflow-execute | Resolve the existing run and eligible stored step through workflow-resolution.md. Do not attach another run. |
 | Attach a template for a genuinely new cycle | coach-workflow-attach | First resolve existing runs and the requested cycle; use live template identity. |
 | Export this workflow | coach-workflow-export | Export the complete selected workflow's steps, results, forms and evidence. |

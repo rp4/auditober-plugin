@@ -1,6 +1,6 @@
 ---
 name: coach-dashboard-link
-description: "Use when the user asks to view or link a dashboard, discover available dashboards, show a filtered dashboard, or answer a question about overdue issues, workflow progress, owner workload, project coverage, template usage, vendor reassessments, risk treatment, policies or requirements. Also use for requests to save a dashboard view as a link. Creating an item, starting a workflow and exporting records use their own skills."
+description: "Use when the user asks to view or link a dashboard, discover available dashboards, show a filtered dashboard, or answer a question about overdue issues, workflow progress, owner workload, project coverage, template usage, vendor reassessments, risk treatment, policies or requirements. A view with chosen variables uses coach-dashboard-view; a new custom dashboard uses coach-dashboard-build. Creating an item, starting a workflow and exporting records use their own skills."
 uxContract: 1
 hostContract: 1
 ---
@@ -72,7 +72,9 @@ Procedure:
    - Connections, neighborhoods or chains: universe.
    If two fit and context does not decide, ask a concise question with both choices.
    A request to open a new item belongs to coach-item-create; starting or
-   executing a workflow belongs to the corresponding workflow skill.
+   executing a workflow belongs to the corresponding workflow skill. Building
+   or saving a view with chosen variables belongs to coach-dashboard-view; a
+   new custom dashboard belongs to coach-dashboard-build.
 
 2. Resolve the origin from the active session configuration, or the origin
    of get_current_context.currentView.pageUrl when available through the

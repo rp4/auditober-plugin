@@ -1,6 +1,6 @@
 ---
 name: coach-item-create
-description: "Use whenever the user asks to create, add, draft, or open a new item of a known type (e.g., audit, risk, control, issue, policy, process). Works for any admin-configured item type: reads the type's schema via get_schema, gathers required fields interactively if not supplied, validates values against field definitions, and submits a single suggest_change action create suggestion for human approval."
+description: "Use whenever the user asks to create, add, draft, or open a new item of a known type (e.g., audit, risk, control, issue, policy, process). Works for any admin-configured item type: reads the type's schema via get_schema, fills every field the request supports (for example a control's type from what the control does), confirms any uncertain value with the user before submitting, validates values against field definitions, and submits a single suggest_change action create suggestion for human approval."
 uxContract: 1
 hostContract: 1
 ---
@@ -23,10 +23,10 @@ get_schema for a known item slug or mutation target; reuse its tenant/type/sessi
 cache and refresh on the invalidation events defined there.
 
 You are the item-create skill. The user wants to create a new item of an
-admin-configured item type. Your job is to read the type's schema, gather
-required field values from the conversation or through the detected question UI or plain text, and emit
-ONE suggest_change call in the canonical create shape so the assignee sees
-the suggestion preview and can approve.
+admin-configured item type. Your job is to read the type's schema, fill
+every field the user's request supports, confirm anything uncertain with the
+user, and emit ONE suggest_change call in the canonical create shape so the
+assignee sees the suggestion preview and can approve.
 
 The correct shape is exactly:
 
@@ -34,7 +34,7 @@ The correct shape is exactly:
     action: "create",
     itemType: "<slug>",
     data: { fields: { "<fieldKey>": <value>, ... } },
-    reason: "<one short sentence on why this item is being created>"
+    reason: "<one short sentence on why this item is being created, then each value you decided from the request and why>"
   })
 
 The "itemType" is the item type's slug (e.g., "audit", "risk", "control",
@@ -52,27 +52,46 @@ Procedure:
      user named a type that does not exist in the schema, refuse with the
      unknown-type visible turn and offer to pick a valid type when the intended type remains unclear.
 
-  2. Walk the schema's fields. For each `required: true` field, check the
-     conversation or arguments for a value. If absent, ask to
-     gather it. For SELECT and MULTISELECT, use the option values as the
-     choices. For BOOLEAN, two options. For free-text, ask without options.
-     Skip DOCUMENT fields entirely — never ask for one and never put one
-     in the payload, even when the schema marks it required.
+  2. Fill every field you can. Walk ALL of the schema's fields, required and
+     optional, reading each one's label, description and options. Decide each
+     value from what the user gave you:
+       - Stated: the user or the arguments gave the value. Use it.
+       - Clear from the request: the description points to exactly one option.
+         A manager reviewing reconciliations after month end is a detective
+         control; a system check that blocks an entry before posting is a
+         preventive one; "each month" is a monthly frequency. Use it, and
+         remember it was decided by you.
+       - Not supported: nothing in the request points to a value.
+     Never invent facts the request does not contain: people, dates, amounts,
+     ids or document references. Resolve a person the user named to a user id
+     with query_data. A description or other free-text field may restate the
+     user's own words; it may not add new facts. Leave an optional field unset
+     when nothing supports it, and do not ask about it. Skip DOCUMENT fields
+     entirely — never ask for one and never put one in the payload, even when
+     the schema marks it required.
 
-  3. Optional fields. Do not interrogate the user for every optional field
-     — that becomes a multi-page form. Include any optional values the user
-     has already provided in the conversation; leave the rest unset.
+  3. Confirm before you submit. Ask the user BEFORE calling suggest_change
+     when any of these holds: a value you decided could fit two or more
+     options; a required field has no supported value; you are unsure the
+     user means this item type. Ask once, in a single turn, listing each open
+     field with the value you would pick and its choices (SELECT and
+     MULTISELECT use the option values, BOOLEAN two options, free text one
+     open question). When nothing is uncertain, do not ask: submit.
 
   4. Validate. The skill itself does not need to re-validate (suggest_change
      does that), but catch obvious errors before the call — e.g., an
      unrecognized SELECT value, a date that is not ISO 8601, an empty
      required string. Show the error verbatim and ask to fix.
 
-  5. Call suggest_change with the canonical shape above. If it returns a
-     validation error, show the error verbatim and ask to
-     resolve. Do not silently coerce values.
+  5. Call suggest_change with the canonical shape above. In `reason`, after
+     the why, name each value you decided from the request and the words it
+     came from (e.g. "Control type: detective, from 'reviews after month
+     end'") so the approver can check it. If suggest_change returns a
+     validation error, show the error verbatim and ask to resolve. Do not
+     silently coerce values.
 
-  6. Hand off with one-line summary, the action link wrapping previewUrl.
+  6. Hand off with one-line summary, the values you decided, and the action
+     link wrapping previewUrl.
 
 Follow the shared host contract for tool announcements, concise results,
 artifact delivery, pending states and human approval.
@@ -84,7 +103,8 @@ artifact delivery, pending states and human approval.
 - `--type <slug>` — item type slug (e.g., `audit`, `risk`, `control`). If
   absent, ask the user.
 - `--values <json>` — optional, a JSON object of field keys to values. If
-  partial, gather the rest interactively.
+  partial, fill the rest from the request and confirm any uncertain value
+  with the user before submitting.
 - `--reason <text>` — optional, one sentence for the suggestion's reason
   field; helps the approver decide whether to accept.
 
@@ -92,24 +112,29 @@ artifact delivery, pending states and human approval.
 
 1. Call `get_schema(type: "<slug>")` for the known type. If it does not exist,
    refuse through the detected question UI or plain text offering the closest valid types as picks.
-2. Build the values map. For each `required: true` field on the type:
+2. Build the values map over every field on the type, required and optional:
    - If the user provided a value (in args or conversation), use it.
-   - If not, ask to gather it. SELECT and MULTISELECT use the
-     schema's options; free-text uses a single open question.
-3. Include any optional field values the user has already supplied. Don't
-   interrogate for every optional field.
+   - If the request clearly points to one value (a control's type from what
+     the control does, a frequency from "each quarter"), use it and note it
+     as decided.
+   - If nothing supports a value, leave an optional field unset. Never
+     invent people, dates, amounts or ids.
+3. Before submitting, ask the user in one turn about every value that could
+   fit more than one option and every required field still empty. SELECT and
+   MULTISELECT use the schema's options; free-text uses a single open
+   question. Skip this step when nothing is uncertain.
 4. Call:
 
        suggest_change({
          action: "create",
          itemType: "<slug>",
          data: { fields: { ... } },
-         reason: "<short why>"
+         reason: "<short why>. Decided from the request: <field>: <value>, from '<words>'"
        })
 
 5. On validation error, show the error verbatim and ask to
    resolve.
-6. Hand off with summary + `[Review and approve](<previewUrl>)`.
+6. Hand off with summary, the decided values + `[Review and approve](<previewUrl>)`.
 
 ## Notes
 

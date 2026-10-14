@@ -1,6 +1,6 @@
 # Auditober plugin
 
-Version 0.26.2. This package contains 29 skills and 4 support agents.
+Version 0.27.1. This package contains 31 skills and 4 support agents.
 
 Use these skills to work in your AssureSwarm tenant. Start with `/coach-setup` to verify the connection and available capabilities. The assistant uses the live tenant schema and your current permissions.
 
@@ -9,6 +9,20 @@ Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items,
 ## Install and connect
 
 For Claude, upload the native plugin ZIP. The portable distribution also includes a Claude-uploadable root, a Codex payload and `SETUP.md`; follow that guide for your client. Configure your own AssureSwarm MCP endpoint and authenticate in your host. No tenant connection is embedded in this public package.
+
+Authorize the complete MCP tool scope set during initial setup:
+
+```text
+openid profile email
+read:context read:items read:data read:workflows read:dashboards read:documents
+read:suggestions write:suggestions write:documents
+```
+
+These scopes cover reads, the review queue, proposed changes and document uploads. Suggestions need human approval in the app; uploads attach files directly when you authorize them. Setup does not request `approve:suggestions`. Current MCP tools also do not need `write:forms`, `write:items`, `write:workflows` or `write:dashboards`.
+
+For an existing portable Codex installation, run `node "<installed-plugin-root>/scripts/codex-mcp.mjs" --scopes default` with the path printed by setup, complete consent and restart the task. Use `--scopes read-only` for read-only access. Updates preserve an earlier explicit scope choice. The helper keeps separate authorization profiles for each tenant and scope set.
+
+A successful login or schema/context read does not prove that all tool scopes were granted. An older read-only OAuth client registration can cap a new grant; use the helper or your host's connection settings to update the registration and reauthorize. An administrator may need to change the registration policy. Do not edit tokens or delete credential files manually.
 
 [Connection guide](https://docs.assureswarm.com/mcp/connect/)
 
@@ -24,7 +38,9 @@ Available tools differ by host. Missing file execution, extraction or independen
 - `/coach-ask`
 - `/coach-autopilot`
 - `/coach-bulk-user-change`
+- `/coach-dashboard-build`
 - `/coach-dashboard-link`
+- `/coach-dashboard-view`
 - `/coach-document-upload`
 - `/coach-export-package`
 - `/coach-form-create`

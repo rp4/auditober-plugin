@@ -5,11 +5,12 @@
     "coach-troubleshooter",
     "swarm-setup-helper"
   ],
-  "descriptionCharacters": 11338,
+  "descriptionCharacters": 12594,
   "name": "auditober",
   "resources": [
     ".claude-plugin/plugin.json",
     ".codex-plugin/plugin.json",
+    ".codex.mcp.json",
     ".mcp.json",
     "LICENSE",
     "README.md",
@@ -84,8 +85,10 @@
     "skills/coach-ask/SKILL.md",
     "skills/coach-autopilot/SKILL.md",
     "skills/coach-bulk-user-change/SKILL.md",
+    "skills/coach-dashboard-build/SKILL.md",
     "skills/coach-dashboard-link/SKILL.md",
     "skills/coach-dashboard-link/references/dashboard-catalog.md",
+    "skills/coach-dashboard-view/SKILL.md",
     "skills/coach-document-upload/SKILL.md",
     "skills/coach-export-package/SKILL.md",
     "skills/coach-form-create/SKILL.md",
@@ -131,7 +134,9 @@
     "coach-ask",
     "coach-autopilot",
     "coach-bulk-user-change",
+    "coach-dashboard-build",
     "coach-dashboard-link",
+    "coach-dashboard-view",
     "coach-document-upload",
     "coach-export-package",
     "coach-form-create",
@@ -158,5 +163,5 @@
     "coach-workflow-scan"
   ],
   "variant": "auditober",
-  "version": "0.26.2"
+  "version": "0.27.1"
 }

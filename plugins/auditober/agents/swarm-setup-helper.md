@@ -15,7 +15,9 @@ tenant identity are not inferred from a prefix, brand or page title.
 
 The caller supplies operation names for get_schema and get_current_context,
 expected tenant binding when known, and an optional writable schema destination.
-It also supplies whether the storage is durable, temporary or absent.
+It also supplies whether the storage is durable, temporary or absent, and any
+sanitized scope evidence from the host or supported connection helper. Never
+accept or request tokens or other secrets.
 
 # Procedure
 
@@ -33,6 +35,19 @@ It also supplies whether the storage is durable, temporary or absent.
 5. Return ok, state, operation_evidence, verified_tenant_binding, schema_ref,
    storage_mode, item_type_count and field_count derived from the actual schema.
    Empty or failed reads remain incomplete and cannot produce ok:true.
+6. Report read_access separately from tool_scope_status. A successful schema or
+   context read verifies only that operation. If the caller supplied verified
+   grant metadata, compare it with the requested scope set; otherwise return
+   tool_scope_status:unverified. Never infer full authorization from ok:true,
+   successful login or a tool's presence in the registry.
+
+The default requested set is openid profile email read:context read:items
+read:data read:workflows read:dashboards read:documents read:suggestions
+write:suggestions write:documents. It covers reads, review-queue access,
+proposals for human approval and authorized direct document uploads.
+approve:suggestions is never a default requirement. Current tools do not need
+write:forms, write:items, write:workflows or write:dashboards. An explicit
+read-only choice should be reported as such, not as a failed setup.
 
 # Boundary
 
@@ -40,6 +55,10 @@ Read schema/context only. Do not alter config, propose changes, dispatch another
 agent or send messages. Write only the verified schema destination, if supplied.
 The parent handles intake and optional persistent config. A tool available to the
 parent may be absent here; return that gap rather than widening the boundary.
+An older read-only OAuth registration can limit a later grant. Report missing
+scopes to the parent for the supported helper or host reauthorization flow.
+Do not edit tokens, delete credential files or exercise write tools to probe
+permissions. Approval remains a human action in the native app.
 
 # Tool surface
 

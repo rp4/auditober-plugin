@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
-    "version": "0.26.2"
+    "version": "0.27.1"
   },
   "name": "auditober-plugin",
   "owner": {
@@ -13,7 +13,7 @@
       "description": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
       "name": "auditober",
       "source": "./plugins/auditober",
-      "version": "0.26.2"
+      "version": "0.27.1"
     }
   ]
 }

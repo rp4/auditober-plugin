@@ -36,6 +36,32 @@ get_current_context for the current identity. Successful reads establish
 reachability; errors remain errors. The available `swarm-setup-helper` agent can perform
 read-only probing, or run it inline; neither path is an independent review.
 
+Initial connection setup requests all scopes needed by current MCP tools:
+openid profile email read:context read:items read:data read:workflows
+read:dashboards read:documents read:suggestions write:suggestions write:documents.
+read:suggestions covers the review queue, write:suggestions covers proposals
+for human approval, and write:documents covers authorized direct uploads.
+Do not request approve:suggestions by default. Current tools do not need
+write:forms, write:items, write:workflows or write:dashboards.
+
+Use the client's supported configuration and consent flow. For the bundled
+Codex helper, --scopes default selects the full tool set and --scopes read-only
+selects read-only access. Existing explicit choices persist across updates;
+use --scopes default when the user wants the complete tool set. The helper's
+per-tenant, per-scope profiles avoid reusing a narrower registration when the
+effective scope set changes. An older read-only OAuth client registration can
+cap a new grant; update it through the supported helper or host settings and
+reauthorize. An administrator may need to change its policy. Never edit tokens
+or delete credential files manually.
+
+Report login/read verification separately from scope verification. Inspect
+granted-scope metadata only through a supported helper or host capability;
+never expose tokens or secrets. Successful schema/context reads and visible
+tools do not prove all scopes were granted. If that metadata is unavailable,
+mark full tool authorization unverified. Do not create a suggestion or upload
+a file to test write access. OAuth scope never approves a proposed change or
+authorizes unrelated work; human approval remains in the native app.
+
 Resolve the origin from configured connection metadata or the origin of an
 actual currentView.pageUrl. A generic server label cannot prove a hostname.
 Ask for the exact tenant URL only if required and unresolved. Do not invent
@@ -87,7 +113,8 @@ A schedule request does not authorize new sends, imports or approval actions.
    a nonexistent connector name or ask for credentials in chat.
 3. Record verified origin, user, actual tools and this session's discovery.
    Save durable config only when supported. Report successful connection
-   without claiming that a local or downloaded file configured the client.
+   separately from the granted scope set, without claiming that a local or
+   downloaded file configured the client.
 4. If no types exist after complete discovery, explain the current admin
    Studio import path. Offer coach-starter-pack only if listed in
    package-manifest.json and the user requests a prepared import. Retired
@@ -106,6 +133,10 @@ Report each check as passed, failed, or unavailable with its evidence:
   snapshot age cannot establish validity.
 - Permissions: only the current identity and operations actually observed.
   Missing admin capability requires the appropriate administrator.
+- Tool scopes: compare supported granted-scope evidence with the full set
+  above or the user's explicit read-only choice. Report missing scopes and
+  the supported reauthorization path. If no grant metadata is available,
+  report unverified; schema/context reads establish only read access.
 - Storage/OAuth/server configuration: these are not established by a schema
   read. Mark unavailable over MCP when no supported inspection exists and
   point to the verified admin setting.
