@@ -1,8 +1,8 @@
 {
-  "snapshot_taken_at": "2026-10-08T03:35:34.887515+00:00",
-  "git_sha": "unknown",
+  "snapshot_taken_at": "2026-09-30T23:04:35.263270+00:00",
+  "git_sha": "e6d0531e7e834061e90c00108f1c3afe3446a23d",
   "source": "documentation/astro/dist/raw",
-  "source_worktree_dirty": null,
+  "source_worktree_dirty": false,
   "files": {
     "admin/activity-log.md": "e2911c74cb7ec42fc808e745b36f63888b524e68a5582afba7883a99e1328e20",
     "admin/ai-integrations.md": "540bb7cb44cefde85d05d760ffd7ad759901fd789d1e80e54c9b9a4ebc1c05d0",

@@ -1,6 +1,9 @@
 {
   "mcpServers": {
     "auditober": {
+      "oauth": {
+        "scopes": "openid profile email read:context read:items read:data read:workflows read:dashboards read:documents read:suggestions write:suggestions write:documents"
+      },
       "type": "http",
       "url": "https://core.assureswarm.com/mcp"
     }

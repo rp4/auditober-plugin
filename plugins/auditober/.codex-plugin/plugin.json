@@ -17,8 +17,8 @@
     "longDescription": "Work in your Auditober sandbox at core.assureswarm.com: schema discovery, items, links, workflows, forms, documents, dashboard links and Auditober event help. Changes arrive as suggestions you approve in the app.",
     "shortDescription": "Auditober plugin"
   },
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.codex.mcp.json",
   "name": "auditober",
   "skills": "./skills/",
-  "version": "0.26.2"
+  "version": "0.27.1"
 }
